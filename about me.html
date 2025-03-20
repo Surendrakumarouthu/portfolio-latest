@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+          body{
+            background-color: #000000;
+            scroll-behavior: smooth;
+        }
+        .nav-link{
+            color: #ffffff !important;
+            font-size: 18px;
+        }
+        .navbar{
+            background-color: #000000 !important;
+        }
+        i{
+            margin-left: 8px;
+            margin-right: 7px;
+        }
+        .name{
+           font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px; 
+            color: #FF6F00; 
+            font-weight: 600; 
+            text-align: center;
+            margin-top: 20px;
+        }
+        .name-job{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 35px; 
+            color: #ffffff; 
+            font-weight: 400; 
+            text-align: center;
+            margin-top: 30px;
+        }
+        .text-description{
+            line-height: 30px;
+            font-size: 18px;
+            margin-top: 20px;
+            text-align: justify;
+        }
+        .skills-group{
+            margin-bottom: 15px;
+        }
+        .skills-group h5{
+            margin-bottom: 20px;
+            margin-top: 10px;
+            text-decoration:dotted;
+        }
+        i{
+            margin-left: 8px;
+            /* color: #ffffff!important; */
+        }
+        .skills-group li{
+            margin-top: 10px;
+        }
+        .nav-item
+        {
+            margin-left: 20px;
+        }
+        /*footer styles*/
+        .footer {
+    background-color: #222;
+    color: #fff;
+    border-top: 2px solid #FF6F00; /* Top border for style */
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+hr {
+    color: #FF6F00;
+    width: 100%;
+    border: 1px solid #FF6F00;
+}
+
+.footer a:hover {
+    color: #FF6F00;
+}
+
+.footer h5 {
+    font-size: 20px;
+    color: #FF6F00;
+    margin-bottom: 15px; /* Increased spacing */
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+.footer .fab, .footer .fas {
+    transition: transform 0.3s ease;
+    font-size: 24px; /* Icon size */
+}
+
+.footer .fab:hover, .footer .fas:hover {
+    transform: scale(1.1);
+}
+
+.social-icon {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    color: #FF6F00;
+}
+
+/* Adding responsive styles */
+@media (max-width: 768px) {
+    .footer h5 {
+        font-size: 18px; /* Adjust h5 size for mobile */
+    }
+
+    .footer p {
+        font-size: 12px; /* Adjust paragraph size for mobile */
+    }
+}
+.footer i{
+    font-size: 20px!important;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+@media(max-width:576px) {
+    .quick-link li{
+    margin-right: 0px;
+}
+}
+
+.quick-link li{
+    margin-right: 15px;
+}#certificates {
+    background-color: black;
+    padding: 20px 0; /* Increased padding for better touch targets */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#certificates h2 {
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+#certificates h2::first-letter {
+    color: #FF6F00;
+}
+
+#certificatesCarousel {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 90%; /* Set width to a percentage for better responsiveness */
+    max-width: 600px; /* Maintain a max width for larger screens */
+    margin: 0 auto; /* Center horizontally */
+}
+
+.carousel-inner {
+    height: 400px; /* Default height */
+    display: flex;
+    align-items: center;
+}
+
+.carousel-item img {
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    transition: transform 0.5s ease; /* Slightly faster transition */
+}
+
+.carousel-item img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 2px #ffffff);
+}
+
+.carousel-item h3::first-letter {
+    color: #FF6F00;
+}
+
+.carousel-item h3 {
+    margin-top: 20px; /* Reduced margin for smaller screens */
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+@media (max-width: 768px) {
+    .carousel-inner {
+        height: 350px; /* Adjusted height for medium screens */
+    }
+
+    .carousel-item img {
+        max-height: 250px;
+    }
+
+    .carousel-item h3 {
+        font-size: 18px; /* Adjusted font size for medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    #certificates h2 {
+        font-size: 24px; /* Reduced font size for small screens */
+    }
+
+    .carousel-inner {
+        height: 300px; /* Adjusted height for small screens */
+    }
+
+    .carousel-item img {
+        max-height: 200px;
+    }
+
+    .carousel-item h3 {
+        font-size: 14px; /* Adjusted font size for small screens */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 30px; /* Smaller control icons */
+        height: 30px;
+    }
+}
+@media(max-width:576px) {
+    .quick-link li{
+    margin-right: 0px;
+}
+}
+   
+    </style>
+</head>
+<body>
+      
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+             <!-- <a class="navbar-brand" href="#">Surendra Kumar Routhu</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               
+                <ul class="navbar-nav d-flex justify-content-center w-100">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about me.html">
+                            <i class="fas fa-user"></i> About Me
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                  
+                        <a class="nav-link dropdown-toggle" href="#" id="experienceDropdown" data-bs-toggle="dropdown">
+                            <i class="fas fa-folder-open"></i> Experience
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="experienceDropdown">
+                            <li><a href="internship.html" class="dropdown-item">Internships</a></li>
+                            <li><a href="projects.html" class="dropdown-item">Projects</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="Education.html">
+                            <i class="fas fa-tools"></i>Education
+                        </a>
+                    </li>
+                  
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- <h1 class="name"><span class="text-white">About</span> me</h1> -->
+
+  <h2 class="name-job mt-5"><span style="color: #FF6F00;">F</span>ull  <span style="color: #FF6F00;">S</span>tack <span style="color: #FF6F00;">D</span>eveloper</h2>
+  <div class="container">
+    <div class="row">
+        <div class="col-12 col-md-12">
+</body>
+            <p class="text-white text-description fw-normal">
+                
+                As a dedicated Full Stack Developer, I specialize in building dynamic, high-performance web applications using MongoDB, Express.js, Angular, and Node.js. I focus on creating scalable and maintainable full-stack solutions with robust back-end logic, efficient data handling, and seamless front-end integration. My expertise in following modern development standards and implementing RESTful APIs ensures that I deliver responsive, efficient, and cross-platform compatible web applications that meet the highest technical standards.</p>
+        </div>
+    </div>
+  </div>
+  <h3 class="text-center text-white"><span style="color: #FF6F00;">K</span>ey <span style="color: #FF6F00;">S</span>kills</h3>
+  <div class="skills-container text-white">
+
+    <div class="d-flex flex-wrap justify-content-evenly container text-white">
+
+        <div class="skills-group mt-4 col-12 col-md-3">
+            <h5 class="text-start"><span style="color: #FF6F00;">P</span>rogramming Languages</h5>
+            <ul class="list-style-none text-start p-0" style="list-style: none;">
+                <li class="mb-2">
+                    <i class="fab fa-java" style="font-size: 20px; color: #007396;"></i>
+                    Java
+                </li>
+                <li class="mb-2">
+                    <i class="fab fa-html5" style="font-size: 20px; color: #E34F26;"></i>
+                    HTML5
+                </li>
+                <li class="mb-2">
+                    <i class="fab fa-css3" style="font-size: 20px; color: #E34F26;"></i>
+                    CSS3
+                </li>
+                <li class="mb-2">
+                    <i class="fab fa-bootstrap" style="font-size: 20px; color: #E34F26;"></i>
+                    BootStrap
+                </li>
+                <li class="mb-2">
+                    <i class="fab fa-js" style="font-size: 20px; color: #F7E018;"></i>
+                    JavaScript
+                </li>
+                <li class="mb-2">
+                    <i class="fas fa-database" style="font-size: 20px; color: #4DB33D;"></i>
+                    SQL
+                </li>
+                <li class="mb-2">
+                    <i class="fab fa-angular" style="font-size: 20px; color: #FF6F00;"></i>
+                    Angular
+                </li>
+                <li class="mb-2">
+                    <i class="fab fa-typo3" style="font-size: 20px; color: #FF6F00;"></i>
+                    TypeScript
+                </li>
+                <li class="mb-2">
+                    <i class="fab fa-node-js" style="font-size: 20px; color: #FF6F00;"></i>
+                    Node JS
+                </li>
+            </ul>
+        </div>
+        
+
+        <div class="skills-group mt-4 col-12 col-md-3">
+            <h5 class="text-start"><span style="color: #FF6F00;">T</span>ools & Technologies</h5>
+            <ul class="list-style-none text-start p-0" style="list-style: none;">
+                <li class="mb-2">
+                    <i class="fas fa-laptop-code" style="font-size: 20px; color: #007ACC;"></i>
+                    Eclipse
+                </li>
+                <li class="mb-2">
+                    <i class="fab fa-github" style="font-size: 20px; color: #333;"></i>
+                    GitHub, Git
+                </li>
+                <li class="mb-2">
+                    <i class="fas fa-file-code" style="font-size: 20px; color: #007ACC;"></i>
+                    VS Code
+                </li>
+                <li class="mb-2">
+                    <i class="fas fa-cogs" style="font-size: 20px; color: #3DB0D1;"></i>
+                    PEGA (8.8)
+                </li>
+                <li class="mb-2">
+                    <i class="fas fa-database" style="font-size: 20px; color: #00758F;"></i>
+                    MySQL Workbench
+                </li>
+                <li class="mb-2">
+                    <img src="https://www.gstatic.com/devrel-devsite/prod/vdf5af65c45d9e2fdd493c581ff01cb1d11a21b4420a9fcc957400a26863da9d2/firebase/images/touchicon-180.png" alt="Firebase Icon" style="width: 20px;">
+                    Google Firebase
+                </li>
+                
+            </ul>
+        </div>
+
+        <div class="skills-group mt-4 col-12 col-md-2">
+            <h5 class="text-start"><span style="color: #FF6F00;">C</span>oursework</h5>
+            <ul class="list-style-none text-start p-0" style="list-style: none;">
+                <li class="mb-2">
+                    <i class="fas fa-database" style="font-size: 20px; color: #4DB33D;"></i>
+                    DBMS
+                </li>
+                <li class="mb-2">
+                    <i class="fas fa-network-wired" style="font-size: 20px; color: #007ACC;"></i>
+                    Computer Networks
+                </li>
+                <li class="mb-2">
+                    <i class="fas fa-project-diagram" style="font-size: 20px; color: #007396;"></i>
+                    SDLC
+                </li>
+                <li class="mb-2">
+                    <i class="fas fa-object-group" style="font-size: 20px; color: #FF6F00;"></i>
+                    OOPS
+                </li>
+            </ul>
+        </div>
+
+        <div class="skills-group mt-4 col-12 col-md-2">
+            <h5 class="text-start"><span style="color: #FF6F00;">S</span>oft Skills</h5>
+            <ul class="list-style-none text-start p-0" style="list-style: none;">
+                <li class="mb-2">
+                    <i class="fas fa-users" style="font-size: 20px; color: #007ACC;"></i>
+                    Leadership
+                </li>
+                <li class="mb-2">
+                    <i class="fas fa-lightbulb" style="font-size: 20px; color: #FF6F00;"></i>
+                    Curiosity
+                </li>
+                <li class="mb-2">
+                    <i class="fas fa-handshake" style="font-size: 20px; color: #28A745;"></i>
+                    Teamwork
+                </li>
+            </ul>
+        </div>
+
+        <div class="skills-group mt-4 col-12 col-md-2">
+            <h5 class="text-start"><span style="color: #FF6F00;">A</span>reas of Interest</h5>
+            <ul class="list-style-none text-start p-0" style="list-style: none;">
+                <li class="mb-2">
+                    <i class="fas fa-heart" style="font-size: 20px; color: #E63946;"></i>
+                    Volunteerism
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="hobbies col-12 w-100 text-white">
+            <h3 class="text-center"><span style="color: #FF6F00;">H</span>obbies</h3>
+            <p class="text-description text-center">In my free time, I enjoy learning about new tech trends, contributing to open-source projects, and experimenting with web designs.</p>
+          </div>
+    </div>
+</div>
+<section id="certificates" class="certificates d-flex justify-content-center">
+    <div class="container">
+        <h2 style="font-size: 30px; text-align: center;">Certificates</h2>
+        <div id="certificatesCarousel" class="carousel slide col-md-6" data-bs-ride="carousel">
+            <div class="carousel-inner  ">
+                <div class="carousel-item active">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img src="PEGACPSSA88V1_Current.png" alt="Certificate 1" class="d-block w-50">
+                    </div>
+                    <h3 class="text-center">Pega Senior System Architect with Pega systems</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img src="PEGACPSA88V1_Current.png" alt="Certificate 2" class="d-block w-50">
+                    </div>
+                    <h3 class="text-center">Pega System Architect with Pega systems</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img src="AIbyGoogle.png" alt="Certificate 3" class="d-block w-50">
+                    </div>
+                    <h3 class="text-center">Artificial Intelligence with Google Developers</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img src="Cyber Security fortinet.png" alt="Certificate 4" class="d-block w-50">
+                    </div>
+                    <h3 class="text-center">Cyber Security with Fortinet</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img src="html and css.png" alt="Certificate 5" class="d-block w-50">
+                    </div>
+                    <h3 class="text-center">HTML & CSS with BitLabs</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img src="SQL.png" alt="Certificate 6" class="d-block w-50">
+                    </div>
+                    <h3 class="text-center">SQL with BitLabs</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img src="Python.png" alt="Certificate 7" class="d-block w-50">
+                    </div>
+                    <h3 class="text-center">Python with BitLabs</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img src="Devops.png" alt="Certificate 8" class="d-block w-50">
+                    </div>
+                    <h3 class="text-center">Devops with Infosys SpringBoard</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img src="Azure AI.png" alt="Certificate 9" class="d-block w-50">
+                    </div>
+                    <h3 class="text-center">Azure AI Fundamentals with Microsoft</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img src="Azure.png" alt="Certificate 10" class="d-block w-50">
+                    </div>
+                    <h3 class="text-center">Azure Fundamentals with Microsoft</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img src="Fortinet.png" alt="Certificate 11" class="d-block w-50">
+                    </div>
+                    <h3 class="text-center">Network Security Associate Virtual Internship with Fortinet</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img src="basicsofpython.jpg" alt="Certificate 12" class="d-block w-50">
+                    </div>
+                    <h3 class="text-center">Basics of Python with Infosys SpringBoard</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img src="Salesforce Developer.png" alt="Certificate 13" class="d-block w-50">
+                    </div>
+                    <h3 class="text-center">Salesforce Developer Internship with Salesforce</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img src="Fortinet Assosiate.png" alt="Certificate 14" class="d-block w-50">
+                    </div>
+                    <h3 class="text-center">Associate in Cybersecurity with Fortinet</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img src="Fortinet fundmentals.png" alt="Certificate 15" class="d-block w-50">
+                    </div>
+                    <h3 class="text-center">Fundamentals in Cybersecurity with Fortinet</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img src="Machine Learning.png" alt="Certificate 16" class="d-block w-50">
+                    </div>
+                    <h3 class="text-center">Machine Learning with Infosys SpringBoard</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img src="Database with IBM.png" alt="Certificate 17" class="d-block w-50">
+                    </div>
+                    <h3 class="text-center">Database and SQL with IBM</h3>
+                </div>
+            </div>
+
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#certificatesCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#certificatesCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+  
+<footer class="footer mt-5 py-4 bg-dark text-white text-decoration-none">
+    <div class="container">
+        <div class="row text-center text-md-start">
+
+            <div class="col-md-4 mb-4">
+                <h5>About Me</h5>
+                <p>
+                    Routhu Surendra Kumar is a passionate Full Stack Developer, dedicated to delivering high-quality web applications, learning new technologies, and enhancing user experiences for business success.
+                </p>
+              
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled d-flex quick-link">
+                    <li><a href="about me.html" class="text-white text-decoration-none"><i class="fas fa-user me-2"></i>About</a></li>
+                    <li><a href="about me.html" class="text-white text-decoration-none"><i class="fas fa-cogs me-2"></i>Skills</a></li>
+                    <li><a href="projects.html" class="text-white text-decoration-none"><i class="fas fa-briefcase me-2"></i>Projects</a></li>
+                    <li><a href="contact.html" class="text-white text-decoration-none"><i class="fas fa-envelope me-2"></i>Contact</a></li>
+                    <li><a href="internship.html" class="text-white text-decoration-none"><i class="fas fa-laptop me-2"></i>Internship</a></li>
+                    <li><a href="Routhu_Surendra_kumar_Resume_frontend.docx" class="text-white text-decoration-none"><i class="fas fa-file-alt me-2"></i>Resume</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2 mb-4 text-md-end">
+                <h5>Connect with Me</h5>
+                    <div class="d-flex justify-content-md-end justify-content-center mb-3">
+                        <a href="https://github.com/Surendrakumarouthu" class="text-white me-3 social-icon" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/routhu-surendra-kumar-05762923a/" class="text-white me-3 social-icon" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:routhusurendrakumar4@gmail.com" class="text-white social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    <div class="mt-3">
+                        <p>Follow my journey:</p>
+                        <a href="https://x.com/routhusurendra5" class="text-white me-3 social-icon" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/surendrakumarrouthu" class="text-white social-icon" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+            </div>
+        </div>
+
+        <hr class="bg-dark">
+
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="mb-0">
+                    &copy; 2024 <a href="mycard.html" class="text-white text-decoration-none">Routhu Surendra Kumar</a> | Designed & Developed by Me
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+  
+<script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+  
+  
+</body>
+</html>

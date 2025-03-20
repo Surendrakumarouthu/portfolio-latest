@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+          
+
+
+    <style>
+          body{
+            background-color: #000000;
+            scroll-behavior: smooth;
+        }
+        .nav-link{
+            color: #ffffff !important;
+            font-size: 18px;
+        }
+        .navbar{
+            background-color: #000000 !important;
+        }
+        i{
+            margin-left: 8px;
+            margin-right: 7px;
+        }
+        .name{
+           font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px; 
+            color: #FF6F00; 
+            font-weight: 600; 
+            text-align: center;
+            margin-top: 20px;
+        }
+        .name-job{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 35px; 
+            color: #ffffff; 
+            font-weight: 400; 
+            text-align: center;
+            margin-top: 30px;
+        }
+        .text-description{
+            line-height: 30px;
+            font-size: 18px;
+            margin-top: 20px;
+            text-align: justify;
+        }
+        .skills-group{
+            margin-bottom: 15px;
+        }
+        .skills-group h5{
+            margin-bottom: 20px;
+            margin-top: 10px;
+            text-decoration:dotted;
+        }
+        i{
+            margin-left: 8px;
+            /* color: #ffffff!important; */
+        }
+        .skills-group li{
+            margin-top: 10px;
+        }
+        .nav-item
+        {
+            margin-left: 20px;
+        }
+        /*footer styles*/
+        .footer {
+    background-color: #222;
+    color: #fff;
+    border-top: 2px solid #FF6F00; /* Top border for style */
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+hr {
+    color: #FF6F00;
+    width: 100%;
+    border: 1px solid #FF6F00;
+}
+
+.footer a:hover {
+    color: #FF6F00;
+}
+
+.footer h5 {
+    font-size: 20px;
+    color: #FF6F00;
+    margin-bottom: 15px; /* Increased spacing */
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+.footer .fab, .footer .fas {
+    transition: transform 0.3s ease;
+    font-size: 24px; /* Icon size */
+}
+
+.footer .fab:hover, .footer .fas:hover {
+    transform: scale(1.1);
+}
+
+.social-icon {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    color: #FF6F00;
+}
+
+/* Adding responsive styles */
+@media (max-width: 768px) {
+    .footer h5 {
+        font-size: 18px; /* Adjust h5 size for mobile */
+    }
+
+    .footer p {
+        font-size: 12px; /* Adjust paragraph size for mobile */
+    }
+}
+.footer i{
+    font-size: 20px!important;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+@media(max-width:576px) {
+    .quick-link li{
+    margin-right: 0px;
+}
+}
+
+.quick-link li{
+    margin-right: 15px;
+}
+/*New Styles*/
+.title-page::first-letter{
+    font-size: 50px;
+    color:#FF6F00;
+}.title-page {
+    text-align: center;
+    color: #ffffff;
+} 
+
+.container {
+    margin-top: 20px;
+}
+
+.form-container {
+    background-color: #2b2b2b; /* Dark background for contrast */
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.form-label::first-letter{
+    color: #FF6F00; /* Accent color for labels */
+}
+.form-label{
+    color: #ffff;
+}
+
+.form-group {
+    margin-top: 10px;
+}
+
+.form-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.input-label {
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-control {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    padding: 5px 0;
+    font-size: 1rem;
+    color: #ffffff; /* Text color white for better contrast */
+    transition: all 0.3s ease; /* Smooth transition for focus */
+}
+
+.form-control:focus {
+    border-bottom: 1px solid #007bff; /* Blue focus border */
+    background-color: #3b3b3b; /* Slight background change on focus for better readability */
+    color: #ffffff; /* Ensures the text remains readable */
+}
+
+.select-field {
+    padding: 5px 0;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Add spacing between rows */
+}
+
+.col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.input-field::placeholder {
+    color: #aaaaaa; /* Light gray placeholder for visibility */
+}
+
+.input-field:focus::placeholder {
+    color: #ffffff; /* White placeholder on focus */
+}
+
+textarea.form-control {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+textarea.form-control:focus {
+    border-color: #007bff;
+    background-color: #3b3b3b;
+}
+
+.btn-primary {
+    
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.form-control:focus {
+    border: none;
+outline: none;
+    background-color: #3b3b3b; 
+    border-bottom: 1px solid #007bff;
+    border-radius: 0; 
+    padding: 5px 0; 
+}
+
+.form-control::placeholder {
+    color: #aaaaaa; /* Light gray placeholder */
+    padding-left: 5px;
+}
+
+/*icons*/
+.icons {
+  
+
+}
+
+.icons a {
+    margin: 0 5px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 10%;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.icons i {
+    font-size: 28px;
+}
+
+.icons a[href*="facebook.com"] {
+    color: #4267B2;
+}
+
+.icons a[href*="facebook.com"]:hover {
+    background-color: #4267B2;
+    color: #ffffff;
+}
+
+.icons a[href*="twitter.com"] {
+    color: #1DA1F2;
+}
+
+.icons a[href*="twitter.com"]:hover {
+    background-color: #1DA1F2;
+    color: #ffffff;
+}
+
+.icons a[href*="instagram.com"] {
+    color: #C13584;
+}
+
+.icons a[href*="instagram.com"]:hover {
+    background-color: #C13584;
+    color: #ffffff;
+}
+
+.icons a[href*="linkedin.com"] {
+    color: #0077B5;
+}
+
+.icons a[href*="linkedin.com"]:hover {
+    background-color: #0077B5;
+    color: #ffffff;
+}
+
+.icons a[href*="github.com"] {
+    color: #ffffff;
+}
+
+.icons a[href*="github.com"]:hover {
+    background-color: #333;
+    color: #ffffff;
+}
+/* 
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+
+.video-home{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+/* @media screen and (max-width:586px) {
+    .icons{
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+} */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Places the video behind the content */
+    overflow: hidden;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire background */
+}
+
+
+
+</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="#">Surendra Kumar Routhu</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav d-flex justify-content-center w-100">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about me.html">
+                            <i class="fas fa-user"></i> About Me
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="experienceDropdown" data-bs-toggle="dropdown">
+                            <i class="fas fa-folder-open"></i> Experience
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="experienceDropdown">
+                            <li><a href="internship.html" class="dropdown-item">Internships</a></li>
+                            <li><a href="projects.html" class="dropdown-item">Projects</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Education.html">
+                            <i class="fas fa-tools"></i> Education
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="https://videos.pexels.com/video-files/2792967/2792967-uhd_2160_1440_25fps.mp4" type="video/mp4">
+         
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <h1 class="title-page text-center">Let's Connect</h1>
+    
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-6 mb-5 justify-content-start">
+                <div class="form-container p-5 shadow-lg">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-12 col-md-3">
+                                <label class="form-label">Title</label>
+                                <select name="Name_Salutation" class="form-control select-field">
+                                    <option value="-Select-">Title</option>
+                                    <option value="Mr.">Mr.</option>
+                                    <option value="Mrs.">Mrs.</option>
+                                    <option value="Ms.">Ms.</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <label class="form-label">First Name</label>
+                                <input type="text" name="Name_First" class="form-control" placeholder=" " required />
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <label class="form-label">Middle Name</label>
+                                <input type="text" name="Name_Middle" class="form-control" placeholder=" " />
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" name="Name_Last" class="form-control" placeholder=" " required />
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="form-group mb-3">
+                        <label class="form-label">Phone Number</label>
+                        <input type="text" name="PhoneNumber_countrycode" class="form-control w-100" placeholder="Enter phone number" />
+                    </div>
+    
+                    <div class="form-group mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" name="Email" class="form-control w-100" placeholder="Enter email address" required />
+                    </div>
+    
+                    <div class="form-group mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea name="MultiLine1" class="form-control" rows="3" placeholder="Your message..." required></textarea>
+                    </div>
+    
+                    <div class="form-group mb-3">
+                        <label class="form-label">Feedback</label>
+                        <textarea name="MultiLine" class="form-control" rows="3" placeholder="Your feedback..."></textarea>
+                    </div>
+    
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                    </div>
+    
+                    <div class="text-center mt-5">
+                        <a href="mycard.html" class="text-white text-decoration-none" style="background-color: #FF6F00; padding: 10px; border-radius: 10px;"><i class="fas fa-bullseye"></i>
+                            Routhu Surendra Kumar</a>
+                    </div>
+    
+                 
+                </div>
+            </div>
+    
+            <div class="col-md-6 mb-5">
+                <div class="icons  mb-4 ">
+                    <a href="#" target="" class="mx-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/routhusurendra5" target="" class="mx-3"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/surendrakumarrouthu" target="" class="mx-3"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/routhu-surendra-kumar-05762923a/" target="" class="mx-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Surendrakumarouthu" target="" class="mx-3"><i class="fab fa-github"></i></a>
+                </div>
+                <video autoplay muted loop class="w-100" style="border-radius: 50px;">
+                    <source src="contact video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer mt-5 py-4 bg-dark text-white text-decoration-none">
+        <div class="container">
+            <div class="row text-center text-md-start">
+    
+                <div class="col-md-4 mb-4">
+                    <h5>About Me</h5>
+                    <p>
+                        Routhu Surendra Kumar is a passionate MEAN Stack Developer, dedicated to delivering high-quality web applications, learning new technologies, and enhancing user experiences for business success.
+                    </p>
+                  
+                </div>
+    
+                <div class="col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled d-flex quick-link">
+                        <li><a href="about me.html" class="text-white text-decoration-none"><i class="fas fa-user me-2"></i>About</a></li>
+                        <li><a href="about me.html" class="text-white text-decoration-none"><i class="fas fa-cogs me-2"></i>Skills</a></li>
+                        <li><a href="projects.html" class="text-white text-decoration-none"><i class="fas fa-briefcase me-2"></i>Projects</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none"><i class="fas fa-envelope me-2"></i>Contact</a></li>
+                        <li><a href="internship.html" class="text-white text-decoration-none"><i class="fas fa-laptop me-2"></i>Internship</a></li>
+                        <li><a href="Routhu_Surendra_kumar_Resume_frontend.docx" class="text-white text-decoration-none"><i class="fas fa-file-alt me-2"></i>Resume</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-md-2 mb-4 text-md-end">
+                    <h5>Connect with Me</h5>
+                        <div class="d-flex justify-content-md-end justify-content-center mb-3">
+                            <a href="https://github.com/Surendrakumarouthu" class="text-white me-3 social-icon" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/routhu-surendra-kumar-05762923a/" class="text-white me-3 social-icon" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:routhusurendrakumar4@gmail.com" class="text-white social-icon">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <p>Follow my journey:</p>
+                            <a href="https://x.com/routhusurendra5" class="text-white me-3 social-icon" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/surendrakumarrouthu" class="text-white social-icon" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                </div>
+            </div>
+    
+            <hr class="bg-dark">
+    
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">
+                        &copy; 2024 <a href="mycard.html" class="text-white text-decoration-none">Routhu Surendra Kumar</a> | Designed & Developed by Me
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+      
+</body>
+</html>
