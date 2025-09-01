@@ -243,7 +243,7 @@
         border-radius: 8px;
       }
       .card:hover {
-        transform: rotateY(360deg);
+        /* transform: rotateY(360deg); */
         box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
       }
       body,
@@ -281,7 +281,7 @@
       <div class="container-fluid">
         <!-- <a class="navbar-brand" href="#">Surendra Kumar Routhu</a> -->
         <button
-          class="navbar-toggler"
+          class="navbar-toggler ms-auto"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -289,7 +289,9 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav d-flex justify-content-center w-100">
+          <ul
+            class="navbar-nav d-flex d-lg-flex flex-column flex-lg-row gap-2 gap-lg-0 text-center text-lg-start mx-auto mx-lg-0 justify-content-center w-100"
+          >
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="bi bi-house"></i> Home
@@ -325,7 +327,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/eduaction/">
+              <a class="nav-link" href="/education/">
                 <i class="fas fa-tools"></i>Education
               </a>
             </li>

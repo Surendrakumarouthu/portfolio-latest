@@ -155,15 +155,21 @@
       <div class="container-fluid">
         <!-- <a class="navbar-brand" href="#">Surendra Kumar Routhu</a> -->
         <button
-          class="navbar-toggler"
+          class="navbar-toggler ms-auto"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav d-flex gap-4 justify-content-center w-100">
+          <ul
+            class="navbar-nav d-flex d-lg-flex flex-column flex-lg-row gap-3 gap-lg-4 text-center text-lg-start mx-auto mx-lg-0 justify-content-center w-100"
+          >
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="bi bi-house"></i> Home
@@ -199,7 +205,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/eduaction/">
+              <a class="nav-link" href="/education/">
                 <i class="fas fa-tools"></i>Education
               </a>
             </li>
@@ -501,6 +507,14 @@
       roadmapObserver.observe(
         document.querySelector(".career-timeline-container")
       );
+    </script>
+    <script>
+      document.querySelectorAll(".career-box").forEach((box) => {
+        box.addEventListener("click", function () {
+          const extraContent = this.nextElementSibling;
+          extraContent.classList.toggle("active");
+        });
+      });
     </script>
   </body>
 </html>
