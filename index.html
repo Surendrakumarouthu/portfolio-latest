@@ -1,319 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/icon-routhu.png"
+      
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
-        body{
-            background-color: #000000;
-            scroll-behavior: smooth;
-        }
-        .nav-link{
-            color: #ffffff !important;
-            font-size: 18px;
-        }
-        .navbar{
-            background-color: #000000 !important;
-        }
-        i{
-            margin-left: 8px;
-            margin-right: 7px;
-           
+      body {
+        background-color: #000000;
+        scroll-behavior: smooth;
+      }
+      .nav-link {
+        color: #ffffff !important;
+        font-size: 18px;
+      }
+      .navbar {
+        background-color: #000000 !important;
+      }
+      i {
+        margin-left: 8px;
+        margin-right: 7px;
+      }
+      .nav-item {
+        margin-left: 20px;
+      }
+      .name {
+        font-family: "Dancing Script", cursive;
+        font-size: 48px;
+        color: #ff6f00;
+      }
 
-        }
-        .nav-item
-        {
-            margin-left: 20px;
-        }
-        .name{
-            
-    font-family: 'Dancing Script', cursive; 
-    font-size: 48px; 
-    color: #FF6F00; 
-}
-
-.color-div {
-    background-color: #FF6F00; 
-    height: 300px;
-    width: 300px; 
-  
-    transform: translate(-50%, -50%); 
-    border-radius: 50%; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.fa-download{
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-   
-   
-}
-@media (max-width:576px) {
-  .home h1,h2,a{
-    margin-top: 10px;
-    /* text-align: center; */
-  }
-    .image-profile{
-        margin-top: 50px;
-    }
-}
-     
-  /*footer styles*/
-  .footer {
-    background-color: #222;
-    color: #fff;
-    border-top: 2px solid #FF6F00; /* Top border for style */
-    box-sizing: border-box;
-    width: 100%;
-}
-
-.footer a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-hr {
-    color: #FF6F00;
-    width: 100%;
-    border: 1px solid #FF6F00;
-}
-
-.footer a:hover {
-    color: #FF6F00;
-}
-
-.footer h5 {
-    font-size: 20px;
-    color: #FF6F00;
-    margin-bottom: 15px; /* Increased spacing */
-}
-
-.footer p {
-    font-size: 14px;
-}
-
-.footer .fab, .footer .fas {
-    transition: transform 0.3s ease;
-    font-size: 24px; /* Icon size */
-}
-
-.footer .fab:hover, .footer .fas:hover {
-    transform: scale(1.1);
-}
-
-.social-icon {
-    position: relative;
-    display: inline-block;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icon:hover {
-    transform: scale(1.1);
-    color: #FF6F00;
-}
-
-/* Adding responsive styles */
-@media (max-width: 768px) {
-    .footer h5 {
-        font-size: 18px; /* Adjust h5 size for mobile */
-    }
-
-    .footer p {
-        font-size: 12px; /* Adjust paragraph size for mobile */
-    }
-}
-.footer i{
-    font-size: 20px!important;
-    margin-right: 10px;
-    margin-top: 10px;
-}
-
-.quick-link li{
-    margin-right: 15px;
-}
-@media(max-width:576px) {
-    .quick-link li{
-    margin-right: 0px;
-}
-}@keyframes type {
-    from {
-        width: 0;
-    }
-    to {
+      .color-div {
+        background-color: #ff6f00;
+        height: 300px;
         width: 300px;
-    }
-}
 
-@keyframes blink {
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .fa-download {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      @media (max-width: 576px) {
+        .home h1,
+        h2,
+        a {
+          margin-top: 10px;
+          /* text-align: center; */
+        }
+        .image-profile {
+          margin-top: 50px;
+        }
+      }
 
-.role {
-   
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    width: 0;
-    font-size: 18px;
-    animation: type 8s steps(30, end)  infinite , blink 0.7s step-end infinite;
-}
+      /*footer styles*/
+      .footer {
+        background-color: #222;
+        color: #fff;
+        border-top: 2px solid #ff6f00; /* Top border for style */
+        box-sizing: border-box;
+        width: 100%;
+      }
 
-.text-box {
-    width: fit-content;
-    margin: 0;
-}
+      .footer a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
 
+      hr {
+        color: #ff6f00;
+        width: 100%;
+        border: 1px solid #ff6f00;
+      }
+
+      .footer a:hover {
+        color: #ff6f00;
+      }
+
+      .footer h5 {
+        font-size: 20px;
+        color: #ff6f00;
+        margin-bottom: 15px; /* Increased spacing */
+      }
+
+      .footer p {
+        font-size: 14px;
+      }
+
+      .footer .fab,
+      .footer .fas {
+        transition: transform 0.3s ease;
+        font-size: 24px; /* Icon size */
+      }
+
+      .footer .fab:hover,
+      .footer .fas:hover {
+        transform: scale(1.1);
+      }
+
+      .social-icon {
+        position: relative;
+        display: inline-block;
+        transition: transform 0.3s ease, color 0.3s ease;
+      }
+
+      .social-icon:hover {
+        transform: scale(1.1);
+        color: #ff6f00;
+      }
+
+      /* Adding responsive styles */
+      @media (max-width: 768px) {
+        .footer h5 {
+          font-size: 18px; /* Adjust h5 size for mobile */
+        }
+
+        .footer p {
+          font-size: 12px; /* Adjust paragraph size for mobile */
+        }
+      }
+      .footer i {
+        font-size: 20px !important;
+        margin-right: 10px;
+        margin-top: 10px;
+      }
+
+      .quick-link li {
+        margin-right: 15px;
+      }
+      @media (max-width: 576px) {
+        .quick-link li {
+          margin-right: 0px;
+        }
+      }
+      @keyframes type {
+        from {
+          width: 0;
+        }
+        to {
+          width: 300px;
+        }
+      }
+
+      @keyframes blink {
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      .role {
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        width: 0;
+        font-size: 18px;
+        animation: type 8s steps(30, end) infinite, blink 0.7s step-end infinite;
+      }
+
+      .text-box {
+        width: fit-content;
+        margin: 0;
+      }
     </style>
-</head>
-<body>
-
-    
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-             <!-- <a class="navbar-brand" href="#">Surendra Kumar Routhu</a> -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-               
-                <ul class="navbar-nav d-flex justify-content-center w-100">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">
-                            <i class="bi bi-house"></i> Home
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about me.html">
-                            <i class="fas fa-user"></i> About Me
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                  
-                        <a class="nav-link dropdown-toggle" href="#" id="experienceDropdown" data-bs-toggle="dropdown">
-                            <i class="fas fa-folder-open"></i> Experience
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="experienceDropdown">
-                            <li><a href="internship.html" class="dropdown-item">Internships</a></li>
-                            <li><a href="projects.html" class="dropdown-item">Projects</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="Education.html">
-                            <i class="fas fa-tools"></i>Education
-                        </a>
-                    </li>
-                  
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">
-                            <i class="fas fa-envelope"></i> Contact
-                        </a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand" href="#">Surendra Kumar Routhu</a> -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav d-flex justify-content-center w-100">
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="bi bi-house"></i> Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="myWork/">
+                <i class="fa-solid fa-business-time"></i> Work Experience
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-me/">
+                <i class="fas fa-user"></i> About Me
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="experienceDropdown"
+                data-bs-toggle="dropdown"
+              >
+                <i class="fas fa-folder-open"></i> MyWork
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="experienceDropdown">
+                <li>
+                  <a href="internship/" class="dropdown-item">Internships</a>
+                </li>
+                <li>
+                  <a href="projects/" class="dropdown-item">Projects</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="eduaction/">
+                <i class="fas fa-tools"></i>Education
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact/">
+                <i class="fas fa-envelope"></i> Contact
+              </a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
     <!-- <img src="logo-test.webp" alt="" class="rounded-circle"> -->
-    <h2  class="name ms-5 mt-5 fw-bolder"><span style="color: #ffffff;">S</span>urendra <span style="color: #ffffff;">k</span>umar</h2>
-    <div class="container ">
-        <div class="row home">
-            <div class="col-md-6 col-12 justify-content-center d-flex flex-column ">
-             <h1 class="fw-bolder" style="line-height: 52px; font-size: 48px; color: #FF6F00; letter-spacing: 1px;">He<span class="text-white">llo</span>,</h1>
-             <h1 class="fw-bolder" style="line-height: 52px; font-size: 48px; color: #FFffff; letter-spacing: 0px; margin-top: 10px;" ><span style="color: #FF6F00;">I</span>'<span style="color: #FF6F00;">m</span> Surendra kumar R<span style="color: #FF6F00;">.</span></h1>
-             <div class="text-box">
-             <h2 style="line-height: 52px; font-size: 26px; color: #ffff; letter-spacing: 2px;" class="role"> <span style="color: #FF6F00;">F</span>ull  <span style="color: #FF6F00;">S</span>tack <span style="color: #FF6F00;">D</span>eveloper</h2>
-             </div>  <div style="margin-top: 30px;">
-             <a href="Routhu_Surendra_kumar_Resume.pdf" class="download-cv text-decoration-none" download style="background-color: #FF6F00; color: #FFFFFF; padding: 10px; border-radius: 10px; margin-top: 30px; font-weight: 710; font-size: 18px;">
-                Download CV <i class="fas fa-download"></i>
+    <h2 class="name ms-5 mt-5 fw-bolder">
+      <span style="color: #ffffff">S</span>urendra
+      <span style="color: #ffffff">k</span>umar
+    </h2>
+    <div class="container">
+      <div class="row home">
+        <div class="col-md-6 col-12 justify-content-center d-flex flex-column">
+          <h1
+            class="fw-bolder"
+            style="
+              line-height: 52px;
+              font-size: 48px;
+              color: #ff6f00;
+              letter-spacing: 1px;
+            "
+          >
+            He<span class="text-white">llo</span>,
+          </h1>
+          <h1
+            class="fw-bolder"
+            style="
+              line-height: 52px;
+              font-size: 48px;
+              color: #ffffff;
+              letter-spacing: 0px;
+              margin-top: 10px;
+            "
+          >
+            <span style="color: #ff6f00">I</span>'<span style="color: #ff6f00"
+              >m</span
+            >
+            Surendra kumar R<span style="color: #ff6f00">.</span>
+          </h1>
+          <div class="text-box">
+            <h2
+              style="
+                line-height: 52px;
+                font-size: 26px;
+                color: #ffff;
+                letter-spacing: 2px;
+              "
+              class="role"
+            >
+              <span style="color: #ff6f00">F</span>ull
+              <span style="color: #ff6f00">S</span>tack
+              <span style="color: #ff6f00">D</span>eveloper
+            </h2>
+          </div>
+          <div style="margin-top: 30px">
+            <a
+              href="Routhu_Surendra_kumar_Resume.pdf"
+              class="download-cv text-decoration-none"
+              download
+              style="
+                background-color: #ff6f00;
+                color: #ffffff;
+                padding: 10px;
+                border-radius: 10px;
+                margin-top: 30px;
+                font-weight: 710;
+                font-size: 18px;
+              "
+            >
+              Download CV <i class="fas fa-download"></i>
             </a>
+          </div>
         </div>
-            </div>
-            <div class="col-12 col-md-6 image-profile">
-                <img src="my.jpg" alt="" class="img-fluid rounded-circle "  height="600" width="500" >
-               
-            </div>
+        <div class="col-12 col-md-6 image-profile">
+          <img
+            src="assets/images/my.jpg"
+            alt=""
+            class="img-fluid rounded-circle"
+            height="600"
+            width="500"
+          />
         </div>
+      </div>
     </div>
     <footer class="footer mt-5 py-4 bg-dark text-white text-decoration-none">
-        <div class="container">
-            <div class="row text-center text-md-start">
-    
-                <div class="col-md-4 mb-4">
-                    <h5>About Me</h5>
-                    <p>
-                        Routhu Surendra Kumar is a passionate Full Stack Developer, dedicated to delivering high-quality web applications, learning new technologies, and enhancing user experiences for business success.
-                    </p>
-                  
-                </div>
-    
-                <div class="col-md-6 mb-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled d-flex quick-link">
-                        <li><a href="about me.html" class="text-white text-decoration-none"><i class="fas fa-user me-2"></i>About</a></li>
-                        <li><a href="about me.html" class="text-white text-decoration-none"><i class="fas fa-cogs me-2"></i>Skills</a></li>
-                        <li><a href="projects.html" class="text-white text-decoration-none"><i class="fas fa-briefcase me-2"></i>Projects</a></li>
-                        <li><a href="contact.html" class="text-white text-decoration-none"><i class="fas fa-envelope me-2"></i>Contact</a></li>
-                        <li><a href="internship.html" class="text-white text-decoration-none"><i class="fas fa-laptop me-2"></i>Internship</a></li>
-                        <li><a href="Routhu_Surendra_kumar_Resume.pdf" class="text-white text-decoration-none"><i class="fas fa-file-alt me-2"></i>Resume</a></li>
-                    </ul>
-                </div>
-    
-                <div class="col-md-2 mb-4 text-md-end">
-                    <h5>Connect with Me</h5>
-                        <div class="d-flex justify-content-md-end justify-content-center mb-3">
-                            <a href="https://github.com/Surendrakumarouthu" class="text-white me-3 social-icon" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/routhu-surendra-kumar-05762923a/" class="text-white me-3 social-icon" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="mailto:routhusurendrakumar4@gmail.com" class="text-white social-icon">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
-                        <div class="mt-3">
-                            <p>Follow my journey:</p>
-                            <a href="https://x.com/routhusurendra5" class="text-white me-3 social-icon" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="https://www.instagram.com/surendrakumarrouthu" class="text-white social-icon" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div>
-                </div>
+      <div class="container">
+        <div class="row text-center text-md-start">
+          <div class="col-md-4 mb-4">
+            <h5>About Me</h5>
+            <p>
+              Routhu Surendra Kumar is a passionate MEAN Stack Developer,
+              dedicated to delivering high-quality web applications, learning
+              new technologies, and enhancing user experiences for business
+              success.
+            </p>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled d-flex quick-link">
+              <li>
+                <a href="about-me/" class="text-white text-decoration-none"
+                  ><i class="fas fa-user me-2"></i>About</a
+                >
+              </li>
+              <li>
+                <a href="about-me/" class="text-white text-decoration-none"
+                  ><i class="fas fa-cogs me-2"></i>Skills</a
+                >
+              </li>
+              <li>
+                <a href="projects/" class="text-white text-decoration-none"
+                  ><i class="fas fa-briefcase me-2"></i>Projects</a
+                >
+              </li>
+              <li>
+                <a href="contact/" class="text-white text-decoration-none"
+                  ><i class="fas fa-envelope me-2"></i>Contact</a
+                >
+              </li>
+              <li>
+                <a href="internship/" class="text-white text-decoration-none"
+                  ><i class="fas fa-laptop me-2"></i>Internship</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/assets/resume/surendra-resume.pdf"
+                  class="text-white text-decoration-none"
+                  download
+                  ><i class="fas fa-file-alt me-2"></i>Resume</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-2 mb-4 text-md-end">
+            <h5>Connect with Me</h5>
+            <div
+              class="d-flex justify-content-md-end justify-content-center mb-3"
+            >
+              <a
+                href="https://github.com/Surendrakumarouthu"
+                class="text-white me-3 social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/routhu-surendra-kumar-05762923a/"
+                class="text-white me-3 social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="mailto:routhusurendrakumar4@gmail.com"
+                class="text-white social-icon"
+              >
+                <i class="fas fa-envelope"></i>
+              </a>
             </div>
-    
-            <hr class="bg-dark">
-    
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="mb-0">
-                        &copy; 2024 <a href="mycard.html" class="text-white text-decoration-none">Routhu Surendra Kumar</a> | Designed & Developed by Me
-                    </p>
-                </div>
+            <div class="mt-3">
+              <p>Follow my journey:</p>
+              <a
+                href="https://x.com/routhusurendra5"
+                class="text-white me-3 social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/surendrakumarrouthu"
+                class="text-white social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
             </div>
+          </div>
         </div>
+
+        <hr class="bg-dark" />
+
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="mb-0">
+              &copy; 2024
+              <a href="mycard/" class="text-white text-decoration-none"
+                >Routhu Surendra Kumar</a
+              >
+              | Designed & Developed by Me
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
-    
+
     <!-- <div style="display: flex; justify-content: end;">
         <div style=" position: relative; " class="color-div "></div>
     </div> -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+  </body>
 </html>

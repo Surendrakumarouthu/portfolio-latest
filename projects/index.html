@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="/assets/images/icon-routhu.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/7+AM+QJzF33PJg5ZXMt5ZZ7/pb+dBFEzZfD7LT"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <style>
+      body {
+        background-color: #000000;
+        scroll-behavior: smooth;
+      }
+      .nav-link {
+        color: #ffffff !important;
+        font-size: 18px;
+      }
+      .navbar {
+        background-color: #000000 !important;
+      }
+      i {
+        margin-left: 8px;
+        margin-right: 7px;
+      }
+      i {
+        margin-left: 8px;
+        /* color: #ffffff!important; */
+      }
+      .skills-group li {
+        margin-top: 10px;
+      }
+      /*footer styles*/
+      .footer {
+        background-color: #222;
+        color: #fff;
+        border-top: 2px solid #ff6f00; /* Top border for style */
+      }
+
+      .footer a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      hr {
+        color: #ff6f00;
+        width: 100%;
+        border: 1px solid #ff6f00;
+      }
+
+      .footer a:hover {
+        color: #ff6f00;
+      }
+
+      .footer h5 {
+        font-size: 20px;
+        color: #ff6f00;
+        margin-bottom: 15px; /* Increased spacing */
+      }
+
+      .footer p {
+        font-size: 14px;
+        text-align: center;
+      }
+
+      .footer .fab,
+      .footer .fas {
+        transition: transform 0.3s ease;
+        font-size: 24px; /* Icon size */
+      }
+
+      .footer .fab:hover,
+      .footer .fas:hover {
+        transform: scale(1.1);
+      }
+
+      .social-icon {
+        position: relative;
+        display: inline-block;
+        transition: transform 0.3s ease, color 0.3s ease;
+      }
+
+      .social-icon:hover {
+        transform: scale(1.1);
+        color: #ff6f00;
+      }
+
+      /* Adding responsive styles */
+      @media (max-width: 768px) {
+        .footer h5 {
+          font-size: 18px; /* Adjust h5 size for mobile */
+        }
+
+        .footer p {
+          font-size: 12px; /* Adjust paragraph size for mobile */
+        }
+      }
+      .footer i {
+        font-size: 20px !important;
+        margin-right: 10px;
+        margin-top: 10px;
+      }
+
+      .quick-link li {
+        margin-right: 15px;
+      }
+      /*Project Styles*/
+      .internship-item {
+        margin-bottom: 30px;
+      }
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-header > img {
+        border-radius: 10px 10px 0 0;
+        opacity: 1 !important;
+        width: 150px !important;
+        height: 150px !important;
+      }
+
+      .card-body {
+        padding: 10px;
+        height: 200px;
+      }
+
+      .card-title {
+        font-weight: 600;
+        font-size: 1.25rem;
+        color: #343a40;
+      }
+
+      .card-text {
+        font-size: 0.95rem;
+        color: #6c757d;
+      }
+
+      .card-footer {
+        background-color: transparent;
+        border-top: none;
+        text-align: center;
+      }
+
+      .card-footer .btn {
+        background-color: #ff6f00;
+        color: #fff;
+        border-radius: 50px;
+        padding: 10px 25px;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+        margin-top: 30px !important;
+      }
+
+      .card-footer .btn:hover {
+        background-color: #ff6f00;
+      }
+
+      .card-footer a {
+        text-decoration: none;
+      }
+      /*Video Styles*/
+      .video-wrapper {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+      }
+
+      video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+      }
+
+      .container-overlay {
+        position: relative;
+        z-index: 2;
+        color: white;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+      .row {
+        margin-bottom: 30px;
+      }
+
+      .card {
+        background-color: rgba(21, 16, 48, 0.8) !important;
+        color: #ffffff;
+        border: none;
+        perspective: 1000px;
+        transition: transform 1s ease-in-out, box-shadow 1s ease-in-out;
+        transform-style: preserve-3d;
+
+        border-radius: 20%;
+        height: 550px;
+        margin: 20px 10px;
+        background-color: rgb(21, 16, 48);
+        color: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        margin: 20px;
+        border-radius: 8px;
+      }
+      .card:hover {
+        transform: rotateY(360deg);
+        box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+      }
+      body,
+      html {
+        height: auto;
+        overflow-x: hidden;
+      }
+
+      h2 {
+        font-size: 36px;
+        color: #fff;
+      }
+      p {
+        color: #ffffff !important;
+        text-align: start;
+      }
+      .card > h5 {
+        color: #ffffff !important;
+        text-align: start;
+        font-weight: 800 !important;
+        font-size: 26px !important;
+      }
+      .nav-item {
+        margin-left: 20px;
+      }
+      @media (max-width: 576px) {
+        .quick-link li {
+          margin-right: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand" href="#">Surendra Kumar Routhu</a> -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav d-flex justify-content-center w-100">
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="bi bi-house"></i> Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/myWork/">
+                <i class="fa-solid fa-business-time"></i> Work Experience
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about-me/">
+                <i class="fas fa-user"></i> About Me
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="experienceDropdown"
+                data-bs-toggle="dropdown"
+              >
+                <i class="fas fa-folder-open"></i> MyWork
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="experienceDropdown">
+                <li>
+                  <a href="/internship/" class="dropdown-item">Internships</a>
+                </li>
+                <li>
+                  <a href="/projects/" class="dropdown-item">Projects</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/eduaction/">
+                <i class="fas fa-tools"></i>Education
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/contact/">
+                <i class="fas fa-envelope"></i> Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="video-wrapper">
+      <video muted autoplay playsinline loop preload="auto">
+        <source src="/assets/images/intern-bg.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="container container-overlay">
+        <h2 style="letter-spacing: 1px; text-align: center" class="p-2">
+          <span style="color: #ff6f00">P</span>rojects
+        </h2>
+        <div class="row d-flex mt-5">
+          <div class="project-item col-12 col-md-4">
+            <div
+              class="card"
+              style="
+                background-color: #1c1c1e;
+                color: #ffffff;
+                border-radius: 15px;
+              "
+            >
+              <div
+                class="card-header"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-bottom: none;
+                "
+              >
+                <img
+                  src="/assets/images/python logo.webp"
+                  alt="Python-based speech-to-text"
+                  height="200px"
+                />
+                <div style="position: absolute; top: 10px; right: 10px">
+                  <a
+                    href="https://github.com/Surendrakumarouthu/Python-based-speech-to-text-and-text-to-speech-conversion"
+                  >
+                    <img
+                      src="/assets/images/gitlogo.png"
+                      alt="icon"
+                      style="width: 30px; height: 30px"
+                  /></a>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-3" style="color: #ff6f00">
+                  VoiceSync
+                </h5>
+                <p class="card-text">
+                  A Python Tkinter application integrates speech-to-text
+                  functionality and text-to-speech capabilities, providing an
+                  intuitive interface for communication aids, especially
+                  beneficial for users with speech or hearing impairments,
+                  showcasing expertise in Python GUI development and natural
+                  language processing.
+                </p>
+              </div>
+              <div
+                class="card-footer"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-top: none;
+                "
+              >
+                <a
+                  href="https://github.com/Surendrakumarouthu/Python-based-speech-to-text-and-text-to-speech-conversion"
+                  target=""
+                  class="btn btn-primary"
+                  style="border-radius: 20px; padding: 5px 20px"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-item col-12 col-md-4">
+            <div
+              class="card"
+              style="
+                background-color: #1c1c1e;
+                color: #ffffff;
+                border-radius: 15px;
+              "
+            >
+              <div
+                class="card-header"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-bottom: none;
+                "
+              >
+                <img
+                  src="/assets/images/hopeConectlogo.jpg"
+                  alt="Hope Connect Logo"
+                  style="width: 100px; height: auto; mix-blend-mode: multiply"
+                />
+                <div style="position: absolute; top: 10px; right: 10px">
+                  <a href="https://github.com/yourusername/hope-connect">
+                    <img
+                      src="/assets/images/gitlogo.png"
+                      alt="GitHub Icon"
+                      style="width: 30px; height: 30px"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title" style="color: #ff6f00">Hope Connect</h5>
+                <p class="card-text">
+                  Built a dynamic web application using Angular to connect
+                  individuals seeking assistance with resources and support.
+                  Integrated features like real-time data updates and
+                  interactive forms for efficient user interaction. Applied
+                  modern Angular components and RxJS for reactive programming to
+                  ensure seamless performance. Styled the application with
+                  responsive designs for optimal usability on various devices.
+                </p>
+              </div>
+              <div
+                class="card-footer"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-top: none;
+                "
+              >
+                <a
+                  href="https://yourusername.github.io/hope-connect/"
+                  target="_blank"
+                  class="btn btn-primary"
+                  style="border-radius: 20px; padding: 5px 20px"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item col-12 col-md-4">
+            <div
+              class="card"
+              style="
+                background-color: #1c1c1e;
+                color: #ffffff;
+                border-radius: 15px;
+              "
+            >
+              <div
+                class="card-header"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-bottom: none;
+                "
+              >
+                <img
+                  src="/assets/images/logo farmers.png"
+                  alt="Project 2 Logo"
+                />
+                <div style="position: absolute; top: 10px; right: 10px">
+                  <a
+                    href="https://surendrakumarouthu.github.io/FarmTech-Solutions/"
+                    ><img
+                      src="/assets/images/gitlogo.png"
+                      alt="icon"
+                      style="width: 30px; height: 30px"
+                  /></a>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title" style="color: #ff6f00">
+                  FarmTech Solutions
+                </h5>
+                <p class="card-text">
+                  Developed a responsive website using HTML, CSS to provide
+                  agricultural services and solution.Styled the interface with
+                  custom layouts, buttons, and fonts to create a clean,
+                  user-friendly design.Ensured seamless performance across
+                  devices by applying responsive design principles and focusing
+                  on intuitive user experience.
+                </p>
+              </div>
+              <div
+                class="card-footer"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-top: none;
+                "
+              >
+                <a
+                  href="https://surendrakumarouthu.github.io/FarmTech-Solutions/"
+                  target=""
+                  class="btn btn-primary"
+                  style="border-radius: 20px; padding: 5px 20px"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item col-12 col-md-4">
+            <div
+              class="card"
+              style="
+                background-color: #1c1c1e;
+                color: #ffffff;
+                border-radius: 15px;
+              "
+            >
+              <div
+                class="card-header"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-bottom: none;
+                "
+              >
+                <img
+                  src="/assets/images/blood link project.webp"
+                  alt="Project 3 Logo"
+                />
+                <div style="position: absolute; top: 10px; right: 10px">
+                  <a href="https://surendrakumarouthu.github.io/Blood-Link/">
+                    <img
+                      src="/assets/images/gitlogo.png"
+                      alt="icon"
+                      style="width: 30px; height: 30px"
+                  /></a>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title" style="color: #ff6f00">Blood Link</h5>
+                <p class="card-text">
+                  Developed a fully responsive blood donation website using
+                  HTML, CSS, and Bootstrap.Designed an intuitive and
+                  mobile-friendly interface to facilitate users in finding and
+                  registering as blood donors.Ensured smooth user experience
+                  with clear navigation and seamless functionality across all
+                  devices.
+                </p>
+              </div>
+              <div
+                class="card-footer"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-top: none;
+                "
+              >
+                <a
+                  href="https://surendrakumarouthu.github.io/Blood-Link/"
+                  target=""
+                  class="btn btn-primary"
+                  style="border-radius: 20px; padding: 5px 20px"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-item col-12 col-md-4">
+            <div
+              class="card"
+              style="
+                background-color: #1c1c1e;
+                color: #ffffff;
+                border-radius: 15px;
+              "
+            >
+              <div
+                class="card-header"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-bottom: none;
+                "
+              >
+                <img src="/assets/images/logo.jpg" alt="Project 3 Logo" />
+                <div style="position: absolute; top: 10px; right: 10px">
+                  <a href=""
+                    ><img
+                      src="/assets/images/gitlogo.png"
+                      alt="icon"
+                      style="width: 30px; height: 30px"
+                  /></a>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title" style="color: #ff6f00">
+                  EduFuture Bank
+                </h5>
+                <p class="card-text">
+                  EduFuture Bank is a banking solution that streamlines branch
+                  management, improves transaction handling, and provides
+                  insights into customer activity. It uses Figma, Angular,
+                  JavaScript, Bootstrap, Express, Node.js, and MongoDB for
+                  efficient resource management and customer relationship
+                  building.
+                </p>
+              </div>
+              <div
+                class="card-footer"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-top: none;
+                "
+              >
+                <a
+                  href=""
+                  target=""
+                  class="btn btn-primary"
+                  style="border-radius: 20px; padding: 5px 20px"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-item col-12 col-md-4">
+            <div
+              class="card"
+              style="
+                background-color: #1c1c1e;
+                color: #ffffff;
+                border-radius: 15px;
+              "
+            >
+              <div
+                class="card-header"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-bottom: none;
+                "
+              >
+                <img src="/assets/images/cal.png" alt="Project 3 Logo" />
+                <div style="position: absolute; top: 10px; right: 10px">
+                  <a href="https://surendrakumarouthu.github.io/WebCalculator/"
+                    ><img
+                      src="/assets/images/gitlogo.png"
+                      alt="icon"
+                      style="width: 30px; height: 30px"
+                  /></a>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title" style="color: #ff6f00">
+                  Responsive Web Calculator
+                </h5>
+                <p class="card-text">
+                  The project is a responsive web-based calculator using HTML,
+                  CSS, and JavaScript, offering basic arithmetic operations,
+                  percentage calculations, and backspace functions. It features
+                  a modern, dark-themed interface with CSS grid layout and error
+                  handling, showcasing front-end development and interactive web
+                  application design skills.
+                </p>
+              </div>
+              <div
+                class="card-footer"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-top: none;
+                "
+              >
+                <a
+                  href="https://surendrakumarouthu.github.io/WebCalculator/"
+                  target=""
+                  class="btn btn-primary"
+                  style="border-radius: 20px; padding: 5px 20px"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-item col-12 col-md-4">
+            <div
+              class="card"
+              style="
+                background-color: #1c1c1e;
+                color: #ffffff;
+                border-radius: 15px;
+              "
+            >
+              <div
+                class="card-header"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-bottom: none;
+                "
+              >
+                <img src="/assets/images/portfolio.png" alt="Project 3 Logo" />
+                <div style="position: absolute; top: 10px; right: 10px">
+                  <a
+                    href="https://surendrakumarouthu.github.io/Surendra-kumar-s-Portfolio/"
+                  >
+                    <img
+                      src="/assets/images/gitlogo.png"
+                      alt="icon"
+                      style="width: 30px; height: 30px"
+                  /></a>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title" style="color: #ff6f00">Portfolio</h5>
+                <p class="card-text">
+                  Created a modern, responsive personal portfolio website using
+                  HTML, CSS, and JavaScript to showcase skills, projects, and
+                  experiences. Integrated Bootstrap for responsiveness. Hosted
+                  on GitHub, it showcases web development proficiency and best
+                  practices. The portfolio serves as a platform for potential
+                  employers to review and connect with the designer.
+                </p>
+              </div>
+              <div
+                class="card-footer"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-top: none;
+                "
+              >
+                <a
+                  href="https://surendrakumarouthu.github.io/Surendra-kumar-s-Portfolio/"
+                  target=""
+                  class="btn btn-primary"
+                  style="border-radius: 20px; padding: 5px 20px"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-item col-12 col-md-4">
+            <div
+              class="card"
+              style="
+                background-color: #1c1c1e;
+                color: #ffffff;
+                border-radius: 15px;
+              "
+            >
+              <div
+                class="card-header"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-bottom: none;
+                "
+              >
+                <a href=""
+                  ><img src="/assets/images/petstore.png" alt="Project 3 Logo"
+                /></a>
+                <div style="position: absolute; top: 10px; right: 10px">
+                  <img
+                    src="/assets/images/pega.png"
+                    alt="icon"
+                    style="width: 50px; height: 50px"
+                  />
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title" style="color: #ff6f00">
+                  Online Pet Store
+                </h5>
+                <p class="card-text">
+                  An online pet store was automated using Pega software,
+                  enhancing order processing and customer management. The
+                  project included seamless workflows, integrated payment
+                  systems, and user-friendly interfaces. This automation reduced
+                  manual intervention, improved operational efficiency, and
+                  enhanced customer satisfaction, paving the way for business
+                  growth.
+                </p>
+              </div>
+              <div
+                class="card-footer"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-top: none;
+                "
+              >
+                <a
+                  href="#"
+                  target=""
+                  class="btn btn-primary"
+                  style="border-radius: 20px; padding: 5px 20px"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-item col-12 col-md-4">
+            <div
+              class="card"
+              style="
+                background-color: #1c1c1e;
+                color: #ffffff;
+                border-radius: 15px;
+              "
+            >
+              <div
+                class="card-header"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-bottom: none;
+                "
+              >
+                <img src="/assets/images/health.png" alt="Project 3 Logo" />
+                <div style="position: absolute; top: 10px; right: 10px">
+                  <img
+                    src="/assets/images/pega.png"
+                    alt="icon"
+                    style="width: 50px; height: 50px"
+                  />
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title" style="color: #ff6f00">
+                  Healthcare Insurance Management System
+                </h5>
+                <p class="card-text">
+                  A healthcare insurance management system was implemented using
+                  Pega software, streamlining medical expenses, managing high
+                  costs, and providing financial protection. The system
+                  automates core insurance functions, supports various policy
+                  types, and ensures compliance with regulations and data
+                  privacy.
+                </p>
+              </div>
+              <div
+                class="card-footer"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-top: none;
+                "
+              >
+                <a
+                  href="#"
+                  target=""
+                  class="btn btn-primary"
+                  style="border-radius: 20px; padding: 5px 20px"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-item col-12 col-md-4">
+            <div
+              class="card"
+              style="
+                background-color: #1c1c1e;
+                color: #ffffff;
+                border-radius: 15px;
+              "
+            >
+              <div
+                class="card-header"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-bottom: none;
+                "
+              >
+                <img src="/assets/images/meeting.png" alt="Project 3 Logo" />
+                <div style="position: absolute; top: 10px; right: 10px">
+                  <img
+                    src="/assets/images/pega.png"
+                    alt="icon"
+                    style="width: 50px; height: 50px"
+                  />
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title" style="color: #ff6f00">
+                  Online Meeting Room Reservation System
+                </h5>
+                <p class="card-text">
+                  Pega software has developed an Online Meeting Room Reservation
+                  System to streamline organizational booking and management of
+                  meeting spaces, offering real-time availability updates,
+                  automated notifications, room filtering, calendar
+                  synchronization, access control, and approval workflows.
+                </p>
+              </div>
+              <div
+                class="card-footer"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-top: none;
+                "
+              >
+                <a
+                  href="#"
+                  target=""
+                  class="btn btn-primary"
+                  style="border-radius: 20px; padding: 5px 20px"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-item col-12 col-md-4">
+            <div
+              class="card"
+              style="
+                background-color: #1c1c1e;
+                color: #ffffff;
+                border-radius: 15px;
+              "
+            >
+              <div
+                class="card-header"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-bottom: none;
+                "
+              >
+                <img
+                  src="/assets/images/Laptop Icon.png"
+                  alt="Project 3 Logo"
+                />
+                <div style="position: absolute; top: 10px; right: 10px">
+                  <img
+                    src="/assets/images/pega.png"
+                    alt="icon"
+                    style="width: 50px; height: 50px"
+                  />
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title" style="color: #ff6f00">
+                  Online Flight Booking System
+                </h5>
+                <p class="card-text">
+                  Pega's online flight booking system offers a user-friendly,
+                  automated platform for booking domestic and international
+                  flights, featuring flight filtering, booking management,
+                  notifications, frequent flyer integration, and mobile
+                  interface.
+                </p>
+              </div>
+              <div
+                class="card-footer"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-top: none;
+                "
+              >
+                <a
+                  href="#"
+                  target=""
+                  class="btn btn-primary"
+                  style="border-radius: 20px; padding: 5px 20px"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-item col-12 col-md-4">
+            <div
+              class="card"
+              style="
+                background-color: #1c1c1e;
+                color: #ffffff;
+                border-radius: 15px;
+              "
+            >
+              <div
+                class="card-header"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-bottom: none;
+                "
+              >
+                <img src="/assets/images/stationary.png" alt="Project 3 Logo" />
+                <div style="position: absolute; top: 10px; right: 10px">
+                  <img
+                    src="/assets/images/pega.png"
+                    alt="icon"
+                    style="width: 50px; height: 50px"
+                  />
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title" style="color: #ff6f00">
+                  Stationery Management System
+                </h5>
+                <p class="card-text">
+                  Pega software was used to create a Stationery Management
+                  System, automating office supplies procurement, distribution,
+                  and inventory management. Key features include real-time
+                  tracking, vendor management, and eco-friendly features, with
+                  potential for future integrations.
+                </p>
+              </div>
+              <div
+                class="card-footer"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-top: none;
+                "
+              >
+                <a
+                  href="#"
+                  target=""
+                  class="btn btn-primary"
+                  style="border-radius: 20px; padding: 5px 20px"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-item col-12 col-md-4">
+            <div
+              class="card"
+              style="
+                background-color: #1c1c1e;
+                color: #ffffff;
+                border-radius: 15px;
+              "
+            >
+              <div
+                class="card-header"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-bottom: none;
+                "
+              >
+                <img
+                  src="/assets/images/disatster icon.png"
+                  alt="Project 3 Logo"
+                />
+                <div style="position: absolute; top: 10px; right: 10px">
+                  <img
+                    src="/assets/images/ailogo.png"
+                    alt="icon"
+                    style="width: 50px; height: 50px"
+                  />
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title" style="color: #ff6f00">
+                  Natural Disaster Management System
+                </h5>
+                <p class="card-text">
+                  The Natural Disaster Management System uses AI technology to
+                  predict, monitor, and manage natural disasters, integrating
+                  machine learning, NLP, and hydrological models for effective
+                  communication and water management.
+                </p>
+              </div>
+              <div
+                class="card-footer"
+                style="
+                  text-align: center;
+                  background-color: transparent;
+                  border-top: none;
+                "
+              >
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  style="border-radius: 20px; padding: 5px 20px"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer mt-5 py-4 bg-dark text-white text-decoration-none">
+      <div class="container">
+        <div class="row text-center text-md-start">
+          <div class="col-md-4 mb-4">
+            <h5>About Me</h5>
+            <p>
+              Routhu Surendra Kumar is a passionate MEAN Stack Developer,
+              dedicated to delivering high-quality web applications, learning
+              new technologies, and enhancing user experiences for business
+              success.
+            </p>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled d-flex quick-link">
+              <li>
+                <a href="/about-me/" class="text-white text-decoration-none"
+                  ><i class="fas fa-user me-2"></i>About</a
+                >
+              </li>
+              <li>
+                <a href="/about-me/" class="text-white text-decoration-none"
+                  ><i class="fas fa-cogs me-2"></i>Skills</a
+                >
+              </li>
+              <li>
+                <a href="/projects/" class="text-white text-decoration-none"
+                  ><i class="fas fa-briefcase me-2"></i>Projects</a
+                >
+              </li>
+              <li>
+                <a href="/contact/" class="text-white text-decoration-none"
+                  ><i class="fas fa-envelope me-2"></i>Contact</a
+                >
+              </li>
+              <li>
+                <a href="/internship/" class="text-white text-decoration-none"
+                  ><i class="fas fa-laptop me-2"></i>Internship</a
+                >
+              </li>
+              <li>
+                <a
+                  href="//assets/resume/surendra-resume.pdf"
+                  class="text-white text-decoration-none"
+                  download
+                  ><i class="fas fa-file-alt me-2"></i>Resume</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-2 mb-4 text-md-end">
+            <h5>Connect with Me</h5>
+            <div
+              class="d-flex justify-content-md-end justify-content-center mb-3"
+            >
+              <a
+                href="https://github.com/Surendrakumarouthu"
+                class="text-white me-3 social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/routhu-surendra-kumar-05762923a/"
+                class="text-white me-3 social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="mailto:routhusurendrakumar4@gmail.com"
+                class="text-white social-icon"
+              >
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+            <div class="mt-3">
+              <p>Follow my journey:</p>
+              <a
+                href="https://x.com/routhusurendra5"
+                class="text-white me-3 social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/surendrakumarrouthu"
+                class="text-white social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="bg-dark" />
+
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="mb-0">
+              &copy; 2024
+              <a href="/mycard/" class="text-white text-decoration-none"
+                >Routhu Surendra Kumar</a
+              >
+              | Designed & Developed by Me
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+VhDk5FgNXARWr1W1N5nI1VtviqqD"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
